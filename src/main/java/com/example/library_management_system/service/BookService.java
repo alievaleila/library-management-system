@@ -12,4 +12,9 @@ public interface BookService {
     List<BookResponse> getAll();
 
     BookResponse save(BookRequest request);
+
+    @Nullable
+    BookResponse getById(Long id);
+
+    void delete(Long id);
 }

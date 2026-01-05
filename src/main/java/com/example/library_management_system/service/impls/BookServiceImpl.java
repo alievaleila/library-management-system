@@ -25,7 +25,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public @Nullable List<BookResponse> getAll() {
-        List<Book> books=bookRepository.findAll();
+        List<Book> books = bookRepository.findAll();
         return books.stream().map(bookMapper::toResponse).toList();
     }
 
@@ -38,5 +38,16 @@ public class BookServiceImpl implements BookService {
         book.setCategory(category);
         Book savedBook = bookRepository.save(book);
         return bookMapper.toResponse(savedBook);
+    }
+
+    @Override
+    public @Nullable BookResponse getById(Long id) {
+
+        return null;
+    }
+
+    @Override
+    public void delete(Long id) {
+
     }
 }
