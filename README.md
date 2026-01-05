@@ -1,7 +1,7 @@
-#📚 Library Management System API
+📚 Library Management System API
 A professional, production-ready RESTful API built with Spring Boot for managing books and categories. This project demonstrates clean architecture, centralized error handling, and automated object mapping.
 
-##🛠 Tech Stack
+🛠 Tech Stack
 Java 17+
 
 Spring Boot 3.x
@@ -16,7 +16,7 @@ Lombok (Reducing boilerplate code)
 
 Global Exception Handling (Centralized error management)
 
-##🏗 Layered Architecture
+🏗 Layered Architecture
 The project follows a clean, decoupled architecture:
 
 Controller Layer: Handles HTTP requests and returns standardized responses.
@@ -27,7 +27,7 @@ Repository Layer: Direct interaction with the PostgreSQL database.
 
 Mapper: Decouples internal entities from external DTOs using MapStruct.
 
-##🚀 Getting Started
+🚀 Getting Started
 1. Database Configuration
 Update your PostgreSQL credentials in src/main/resources/application.properties:
 spring.datasource.url=jdbc:postgresql://localhost:5432/library_db
@@ -38,7 +38,7 @@ spring.datasource.password=your_password
 2. Run the Application
 mvn spring-boot:run
 
-##API Endpoints
+API Endpoints
 
 Books
 
@@ -54,7 +54,7 @@ Method,Endpoint,Description
 GET,/api/categories,Retrieve all categories
 POST,/api/categories,Create a new category
 
-##⚠️ Global Error Handling
+⚠️ Global Error Handling
 The application uses a @RestControllerAdvice to provide consistent error responses. If a resource is not found, the API returns a structured JSON:
 
 {
