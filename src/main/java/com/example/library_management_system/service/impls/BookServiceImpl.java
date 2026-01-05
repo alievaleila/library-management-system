@@ -25,9 +25,8 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public @Nullable List<BookResponse> getAll() {
-
-
-        return List.of();
+        List<Book> books=bookRepository.findAll();
+        return books.stream().map(bookMapper::toResponse).toList();
     }
 
     @Override
